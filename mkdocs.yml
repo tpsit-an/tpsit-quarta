@@ -1,0 +1,79 @@
+site_name: TPSIT Quarta
+site_url: https://tpsit-an.github.io/tpsit-quarta/
+site_description: Dispense scolastiche - Quarta
+
+theme:
+  name: material
+  language: it
+  palette:
+    scheme: slate
+    primary: teal
+    accent: amber
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - navigation.path
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.footnote.tooltips
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  icon:
+    admonition:
+      note: octicons/tag-16
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - abbr
+
+extra:
+  mermaid:
+    theme: dark
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mermaid.mjs
+
+nav:
+  - Home: index.md
